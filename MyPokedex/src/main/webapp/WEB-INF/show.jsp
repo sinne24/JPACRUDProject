@@ -9,8 +9,12 @@
 </head>
 <body>
 	<div>
-		<h5>${pokemon.name}(${pokemon.type})</h5>
-		<p>${pokemon.type2}</p>
+		<h2>Pokedex ID: ${pokemon.pokedexId}</h2>
+		<h5> ${pokemon.name}</h5>
+		<p> Pokedex location: ${pokemon.id}</p>
+		<p> Type: ${pokemon.type} ${pokemon.type2}</p>
+		<p> Evolutionary stage: ${pokemon.evolution}</p>
+		<p> Region found: ${pokemon.region}</p>
 	</div>
 <jsp:include page="bootstrapHead.jsp"></jsp:include>
 </body>

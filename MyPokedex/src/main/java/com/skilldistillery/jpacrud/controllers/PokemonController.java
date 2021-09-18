@@ -28,7 +28,7 @@ public class PokemonController {
 	@RequestMapping (path="getPokemon.do")
 	public String showPokemon(Integer pid, Model model) {
 		model.addAttribute("pokemon", dao.findById(pid));
-		return "pokemon/show";
+		return "show";
 	}
 	
 
