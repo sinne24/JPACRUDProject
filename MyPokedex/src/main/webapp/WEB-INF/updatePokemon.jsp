@@ -8,6 +8,6 @@
 </head>
 <body>
 
-<a href=index.do>Return to Home</a><br/>
+<a href="/">Return to Home</a><br/>
 </body>
 </html>

@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Delete Pokemon</title>
+<title>Successfully added!</title>
 </head>
 <body>
+		<h2>Successfully Added</h2>
 
 <a href="/">Return to Home</a><br/>
 </body>

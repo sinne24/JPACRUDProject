@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.skilldistillery.jpacrud.dao.PokemonDAO;
 import com.skilldistillery.jpacrud.entities.Pokemon;
@@ -33,21 +34,29 @@ public class PokemonController {
 	}
 	@RequestMapping (path="updatePokemon.do")
 	public String updatePokemon(Integer pid, Model model) {
-		model.addAttribute("pokemon", dao.findById(pid));
+//		model.addAttribute("pokemon", dao.findById(pid));
 		return "updatePokemon";
 	}
 	
 	@RequestMapping (path="deletePokemon.do")
 	public String deletePokemon(Integer pid, Model model) {
-		model.addAttribute("pokemon", dao.findById(pid));
+//		model.addAttribute("pokemon", dao.findById(pid));
 		return "deletePokemon";
 	}
 	
-	@RequestMapping (path="createPokemon.do")
-	public String createPokemon(Model model, Pokemon pokemon) {
-		model.addAttribute("pokemon", dao.addPokemon(pokemon));
+	@RequestMapping (path="createPokemonForm.do", method=RequestMethod.POST)
+	public String createPokemonForm(Model model, Pokemon pokemon) {
+//		model.addAttribute("pokemon", dao.addPokemon(pokemon));
 		return "addPokemon";
 	}
+	
+	@RequestMapping (path="createPokemon.do", method=RequestMethod.POST)
+	public String createPokemon(Model model, Pokemon pokemon) {
+		model.addAttribute("pokemon", dao.addPokemon(pokemon));
+		return "addConfirmation";
+	}
+	
+	
 	
 
 }

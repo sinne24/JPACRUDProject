@@ -8,6 +8,10 @@
 </head>
 <body>
 
-<a href=index.do>Return to Home</a><br/>
+<form action="createPokemon.do" method="POST">
+	Pokemon Name: <input type="text" name="name" /> 
+	Add the Pokemon? <input type="submit" value="Add Pokemon"/>
+		</form>
+<a href="/">Return to Home</a><br/>
 </body>
 </html>
