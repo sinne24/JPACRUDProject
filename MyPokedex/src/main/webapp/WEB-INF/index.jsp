@@ -15,6 +15,9 @@
 			Pokemon ID: <input type="text" name="pid" /> <input type="submit"
 				value="Show Pokemon" />
 		</form>
+		<form action="createPokemon.do" method="GET">
+			Would you like to add a Pokemon? <input type="submit" value="Add Pokemon"/>
+		</form>
 
 		${p.name }
 

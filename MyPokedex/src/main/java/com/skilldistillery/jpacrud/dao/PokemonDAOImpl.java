@@ -28,4 +28,40 @@ public class PokemonDAOImpl implements PokemonDAO {
 		return em.createQuery(jpql, Pokemon.class).getResultList();
 	}
 
+	@Override
+	public Pokemon addPokemon(Pokemon pokemon) {
+		em.persist(pokemon);
+		em.flush();
+		return pokemon;
+	}
+
+	@Override
+	public Pokemon updatePokemon(Pokemon pokemon) {
+		
+		Pokemon dbPokemon = em.find(Pokemon.class, pokemon);
+		dbPokemon.setName(pokemon.getName());
+		em.flush();
+		return pokemon;
+	}
+
+	@Override
+	public boolean deletePokemon(int pokemonId) {
+		// boolean removedActor = false;
+		//Actor a = em.find(Actor.class, id);
+//		boolean destroyed = false;
+//		if(a != null) {
+//			
+//			em.remove(a); // performs the delete on the managed entity
+//			
+//			//check is removal was successful
+//			removedActor = !em.contains(a);
+//			
+//		}
+		
+		
+		
+		
+		return false;
+	}
+
 }
