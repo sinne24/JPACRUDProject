@@ -23,6 +23,11 @@ public class PokemonDAOImpl implements PokemonDAO {
 	}
 
 	@Override
+	public Pokemon findByName(String name) {
+		return em.find(Pokemon.class, name);
+	}
+	
+	@Override
 	public List<Pokemon> findAll() {
 		String jpql = "SELECT p FROM Pokemon p";
 		return em.createQuery(jpql, Pokemon.class).getResultList();
@@ -35,33 +40,55 @@ public class PokemonDAOImpl implements PokemonDAO {
 		return pokemon;
 	}
 
+//	@Override
+//	public Pokemon updatePokemon(String name, Pokemon pokemon) {
+//		
+//		System.out.println(name + ", " + pokemon);
+//		
+//		Pokemon dbPokemon = em.find(Pokemon.class, name);
+//		dbPokemon.setName(pokemon.getName());
+//		dbPokemon.setpokedexId(pokemon.getpokedexId());
+//		dbPokemon.setType(pokemon.getType());
+//		dbPokemon.setType2(pokemon.getType2());
+//		dbPokemon.setEvolution(pokemon.getEvolution());
+//		dbPokemon.setRegion(pokemon.getRegion());
+//		
+//		System.out.println(dbPokemon);
+//		
+//		em.flush();
+//		return pokemon;
+//	}
+	
 	@Override
-	public Pokemon updatePokemon(Pokemon pokemon) {
+	public Pokemon updatePokemon(int pokemonId, Pokemon pokemon) {
 		
-		Pokemon dbPokemon = em.find(Pokemon.class, pokemon);
+		System.out.println(pokemon);
+		Pokemon dbPokemon = em.find(Pokemon.class, pokemonId);
 		dbPokemon.setName(pokemon.getName());
+		dbPokemon.setpokedexId(pokemon.getpokedexId());
+		dbPokemon.setType(pokemon.getType());
+		dbPokemon.setType2(pokemon.getType2());
+		dbPokemon.setEvolution(pokemon.getEvolution());
+		dbPokemon.setRegion(pokemon.getRegion());
+		
+		System.out.println(dbPokemon);
+		
 		em.flush();
 		return pokemon;
 	}
 
 	@Override
 	public boolean deletePokemon(int pokemonId) {
-		// boolean removedActor = false;
-		//Actor a = em.find(Actor.class, id);
-//		boolean destroyed = false;
-//		if(a != null) {
-//			
-//			em.remove(a); // performs the delete on the managed entity
-//			
-//			//check is removal was successful
-//			removedActor = !em.contains(a);
-//			
-//		}
-		
-		
-		
-		
-		return false;
+		Pokemon pokemon = em.find(Pokemon.class, pokemonId);
+	    boolean removedPokemon = false;
+		boolean destroyed = false;
+		if(pokemon != null) {		
+			em.remove(pokemon); 
+			removedPokemon = !em.contains(pokemon);
+			
+		}	
+		return removedPokemon;
 	}
+
 
 }

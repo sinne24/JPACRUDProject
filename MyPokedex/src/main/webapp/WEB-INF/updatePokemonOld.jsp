@@ -1,22 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Pokemon Details</title>
-	<jsp:include page="bootstrapHead.jsp"></jsp:include>
+<meta charset="UTF-8">
+<title>Update Pokemon</title>
 </head>
-<body>
-	<div>
-		<h2>Pokedex ID: ${pokemon.pokedexId}</h2>
+<body>		
+<form action="updatePokemon.do" method="POST">
+	<h2>Update Pokedex DB Location Id: ${pokemon.id}</h2>
 		<h5> ${pokemon.name}</h5>
-		<p> Pokedex location: ${pokemon.id}</p>
+		<p> Official pokedex id number: ${pokemon.pokedexId}</p>
 		<p> Type: ${pokemon.type} ${pokemon.type2}</p>
 		<p> Evolutionary stage: ${pokemon.evolution}</p>
 		<p> Region found: ${pokemon.region}</p>
-		
- <form action="updatePokemon.do" method="POST">
 		
 	Pokemon Name: <input type="text" name="name" /> 
 	<br>
@@ -30,12 +27,8 @@
 	<br>
 	Region Found: <input type="text" name="region" />
 	<br>
-	Update the Pokemon? 
-	Enter Pokedex location: <input type="text" name="pid" /> 
-	<input type="submit" value="update Pokemon" />
-	</form>
-		<a href="home.do">Return to Home</a><br/>
-	</div>
-<jsp:include page="bootstrapHead.jsp"></jsp:include>
+	Update the Pokemon? <input type="submit" value="Update Pokemon"/>
+		</form>
+<a href="/">Return to Home</a><br/>
 </body>
 </html>

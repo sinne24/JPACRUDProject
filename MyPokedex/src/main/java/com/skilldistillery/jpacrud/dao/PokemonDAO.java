@@ -7,11 +7,15 @@ import com.skilldistillery.jpacrud.entities.Pokemon;
 public interface PokemonDAO {
 	
 	Pokemon findById( int pokemonId);
+	
 	List<Pokemon> findAll(); 
 	//add
+	
 	Pokemon addPokemon(Pokemon pokemon);
-	//update
-	Pokemon updatePokemon(Pokemon pokemon);
-	//delete
+	
 	boolean deletePokemon(int pokemonId);
+	
+	Pokemon updatePokemon(int pokemonId, Pokemon pokemon);
+	
+	Pokemon findByName(String name);
 }

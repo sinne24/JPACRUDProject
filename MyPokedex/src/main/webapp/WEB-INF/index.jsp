@@ -15,6 +15,11 @@
 			Pokemon ID: <input type="text" name="pid" /> <input type="submit"
 				value="Show Pokemon" />
 		</form>
+		<form action="deletePokemon.do" method="POST">
+			Delete A pokemon? To delete a pokemon enter its
+			Pokedex location: <input type="text" name="pid" /> 
+			<input type="submit" value="delete Pokemon" />
+		</form>
 		<form action="createPokemonForm.do" method="POST">
 			Would you like to add a Pokemon? <input type="submit" value="Add Pokemon"/>
 		</form>
