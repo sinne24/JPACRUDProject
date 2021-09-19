@@ -8,7 +8,7 @@
 	<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>
-	<div>
+	<div class="container-fluid">
 		<h2>Pokedex ID: ${pokemon.pokedexId}</h2>
 		<h5> ${pokemon.name}</h5>
 		<p> Pokedex location: ${pokemon.id}</p>
@@ -27,6 +27,6 @@
 		</form>
 		<a href="home.do">Return to Home</a><br/>
 	</div>
-<jsp:include page="bootstrapHead.jsp"></jsp:include>
+<jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>

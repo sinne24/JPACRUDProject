@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Pokedex</title>
-<h2>Welcome to your Pokedex PC Trainer!</h2>
 <jsp:include page="bootstrapHead.jsp"></jsp:include>
+<h2>Welcome to your Pokedex PC Trainer!</h2>
 </head>
 <body>
 
@@ -48,6 +48,6 @@
 
 		</table>
 	</div>
-	<jsp:include page="bootstrapHead.jsp"></jsp:include>
+	<jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>

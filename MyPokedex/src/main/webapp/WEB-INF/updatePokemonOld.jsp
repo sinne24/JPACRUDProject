@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Update Pokemon</title>
+<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>		
 <form action="updatePokemon.do" method="POST">
@@ -30,5 +31,6 @@
 	Update the Pokemon? <input type="submit" value="Update Pokemon"/>
 		</form>
 <a href="/">Return to Home</a><br/>
+<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </body>
 </html>
