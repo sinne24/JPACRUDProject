@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpacrud.dao.PokemonDAO;
 import com.skilldistillery.jpacrud.entities.Pokemon;
@@ -50,7 +49,11 @@ public class PokemonController {
 
 //***** Update *********************************************		
 	@RequestMapping (path="updatePokemonForm.do", method=RequestMethod.POST)
-	public String updatePokemonForm(Model model, Pokemon pokemon) {
+	public String updatePokemonForm(Model model, @RequestParam Integer pid) {
+		Pokemon p = dao.findById(pid);
+		System.out.println("************************************************");
+		System.out.println(p + ", " + pid);
+		model.addAttribute("pokemon", p);
 		return "updatePokemon";
 	}
 	

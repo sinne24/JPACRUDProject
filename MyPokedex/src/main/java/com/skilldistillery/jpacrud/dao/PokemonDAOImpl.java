@@ -74,7 +74,7 @@ public class PokemonDAOImpl implements PokemonDAO {
 		System.out.println(dbPokemon);
 		
 		em.flush();
-		return pokemon;
+		return dbPokemon;
 	}
 
 	@Override

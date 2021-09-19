@@ -4,33 +4,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Pokedex</title>
-	<jsp:include page="bootstrapHead.jsp"></jsp:include>
+<meta charset="UTF-8">
+<title>Pokedex</title>
+<h2>Welcome to your Pokedex PC Trainer!</h2>
+<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>
 
 	<div class="container-fluid">
+		Find a pokemon by Pokedex location?
 		<form action="getPokemon.do" method="GET">
-			Pokemon ID: <input type="text" name="pid" /> <input type="submit"
-				value="Show Pokemon" />
+			Enter pokedex location id:<br> <input type="text" name="pid" />
+			<input type="submit" value="Show Pokemon" />
 		</form>
 		<form action="deletePokemon.do" method="POST">
-			Delete A pokemon? To delete a pokemon enter its
-			Pokedex location: <input type="text" name="pid" /> 
-			<input type="submit" value="delete Pokemon" />
+			Delete A pokemon? To delete a pokemon enter its Pokedex location:<br>
+			<input type="text" name="pid" /> <input type="submit"
+				value="delete Pokemon" />
 		</form>
 		<form action="createPokemonForm.do" method="POST">
-			Would you like to add a Pokemon? <input type="submit" value="Add Pokemon"/>
+			Would you like to add a Pokemon? <br><input type="submit"
+				value="Add Pokemon" />
 		</form>
-
+		<br>
 		${p.name }
 
 		<table>
 			<thead>
 				<tr>
-					<th>Id</th>
-					<th>Name</th>
+					<th>Pokedex</th>
+					<th>Locations</th>
 				</tr>
 			</thead>
 
@@ -45,6 +48,6 @@
 
 		</table>
 	</div>
-<jsp:include page="bootstrapHead.jsp"></jsp:include>
+	<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </body>
 </html>

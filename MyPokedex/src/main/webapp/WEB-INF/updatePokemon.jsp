@@ -9,29 +9,29 @@
 </head>
 <body>
 	<div>
-		<h2>Pokedex ID: ${pokemon.pokedexId}</h2>
+ 		<h2>Pokedex ID: ${pokemon.pokedexId}</h2>
 		<h5> ${pokemon.name}</h5>
 		<p> Pokedex location: ${pokemon.id}</p>
 		<p> Type: ${pokemon.type} ${pokemon.type2}</p>
 		<p> Evolutionary stage: ${pokemon.evolution}</p>
-		<p> Region found: ${pokemon.region}</p>
+		<p> Region found: ${pokemon.region}</p> 
 		
  <form action="updatePokemon.do" method="POST">
 		
-	Pokemon Name: <input type="text" name="name" /> 
+	Pokemon Name: <input type="text" value="${pokemon.name}" name="name" /> 
 	<br>
-	Pokedex number: <input type="text" name="pokedexId" />
+	Pokedex number: <input type="text" value ="${pokemon.pokedexId}" name="pokedexId" />
 	<br>
-	Type: <input type="text" name="type" />
+	Type: <input type="text" value ="${pokemon.type}" name="type" />
 	<br>
-	Type 2: <input type="text" name="type2" />
+	Type 2: <input type="text" value ="${pokemon.type2}" name="type2" />
 	<br>
-	Evolutionary stage (1,2,3, no stages): <input type="text" name="evolution" />
+	Evolutionary stage (1,2,3, no stages): <input type="text" value ="${pokemon.evolution}" name="evolution" />
 	<br>
-	Region Found: <input type="text" name="region" />
+	Region Found: <input type="text" value ="${pokemon.region}" name="region" />
 	<br>
 	Update the Pokemon? 
-	Enter Pokedex location: <input type="text" name="pid" /> 
+	Enter Pokedex location: <input type="text" value ="${pokemon.id}" name="pid" /> 
 	<input type="submit" value="update Pokemon" />
 	</form>
 		<a href="home.do">Return to Home</a><br/>

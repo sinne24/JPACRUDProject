@@ -17,12 +17,13 @@
 		<p> Region found: ${pokemon.region}</p>
 		
 		<form action="updatePokemonForm.do" method="POST">
+		<input type="hidden" name="pid" value="${pokemon.id }"/> 
 			Update stats? <br> <input type="submit" value="Update Pokemon" />
 		</form>
 		<form action="deletePokemon.do" method="POST">
-			Delete this pokemon? <br>
-			Pokedex location: <input type="text" name="pid" /> 
-			<input type="submit" value="delete Pokemon" />
+			Delete this pokemon?<br>
+			<input type="text" value="${pokemon.id }" name="pid" /> <input type="submit"
+				value="delete Pokemon" />
 		</form>
 		<a href="home.do">Return to Home</a><br/>
 	</div>
