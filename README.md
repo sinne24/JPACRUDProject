@@ -12,5 +12,6 @@ MySql, Eclipse IDE, Boot Strap, Spring Boot, MySql Workbench
 - When designing the update functionality I learned the lesson of how to pass a hidden identifier so that the entity being accessed is not lost between jsp files and the controller.
 - Complete all of the functional needs before tackling aesthetics. While this is a typical practice for me, the applicability of it was strongly reinforced in this project. 
 - Finding the balance between which functions needs a jsp page versus which can be backend functionalities was tricky. Ultimately the hardest balancing act as a novice was navigating between the jsp files, contoller, and DAO implementation.
+- Reading through and understanding the stack traces when running into server errors was frustrating but necessary practice. I ran into the 405, 404, 500, 400, a whole host of those white label pages when developing this project. However, the sense of accomplishment after debugging a nagging issue was heady.
 
  
