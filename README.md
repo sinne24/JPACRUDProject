@@ -10,4 +10,6 @@ MySql, Eclipse IDE, Boot Strap, Spring Boot, MySql Workbench
 ### Lessons Learned
 - A good set-up will make or break the rest of project development
 - When designing the update functionality I learned the lesson of how to pass a hidden identifier so that the entity being accessed is not lost between jsp files and the controller.
+- Complete all of the functional needs before tackling aesthetics. While this is a typical practice for me, the applicability of it was strongly reinforced in this project. 
+
  
